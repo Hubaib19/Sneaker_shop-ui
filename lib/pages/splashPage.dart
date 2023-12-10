@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneaker_shop/pages/homePage.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -9,24 +10,58 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: Colors.grey[300],
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
-              children:[ Image.asset(
-            'lib/images/logo-removebg-preview.png',
-            height: 240,
-          )),
-        ),
-        const SizedBox(height: 48),
-        const Text(
-          'Just Do it',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-        ),
-        const SizedBox(height: 24),
-        const Text(
-          'Brand new sneakers and custom kicks made with premium quality',
-          style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 16, color: Colors.grey),
-          textAlign: TextAlign.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: Image.asset(
+                  'lib/images/logo.png2-removebg-preview1.png',
+                  height: 180,
+                ),
+              ),
+              const SizedBox(
+                height: 48,
+              ),
+              const Text(
+                'Just Do It',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              const Text(
+                'Brand new sneakers and customs kicks made with premium quality',
+                style: TextStyle(fontSize: 16, color: Colors.grey),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(
+                height: 48,
+              ),
+              GestureDetector(
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen())),
+                child: Container(
+                  width: 300,
+                  height: 70,
+                  decoration: BoxDecoration(
+                      color: Colors.grey[900],
+                      borderRadius: BorderRadius.circular(12)),
+                  padding: const EdgeInsets.all(25),
+                  child: const Center(
+                    child: Text(
+                      'Shop Now',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
