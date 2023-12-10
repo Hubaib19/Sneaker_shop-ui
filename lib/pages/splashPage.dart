@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneaker_shop/pages/homePage.dart';
+import 'package:sneaker_shop/pages/shopPage.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -41,7 +41,7 @@ class SplashScreen extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen())),
+                    MaterialPageRoute(builder: (context) => const ShopScreen())),
                 child: Container(
                   width: 300,
                   height: 70,
